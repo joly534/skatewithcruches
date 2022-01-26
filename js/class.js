@@ -11,14 +11,23 @@ class Skater {
             ctx.drawImage(image, this.sx, this.sy, this.sWidth, this.sHeight, dx, dy, dWidth, dHeight);
         };
 
+        this.gravity = function(){
+            if (this.elevation != 0) {
+                this.sy += 1 * this.gravity;
+                console.log('tombe')
+            }
+        }
+
         this.jump = function(){
             this.sy += 1;
             this.elevation += 1;
+            console.log(this.elevation)
         };
 
         this.land = function(){
             this.sy -= 1; 
             this.elevation -= 1;
+            console.log(this.elevation + 'tombne')
         }
 
     } 

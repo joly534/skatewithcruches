@@ -13,6 +13,10 @@ function update(){
     ctx.clearRect(0,0,canvas.width, canvas.height);
     
     skater.draw(50,50 ,125,250);
+    if (skater.elevation > 0){
+        skater.land();
+
+    }
 
 
     window.requestAnimationFrame(update);
