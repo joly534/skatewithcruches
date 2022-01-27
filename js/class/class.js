@@ -16,14 +16,14 @@ class Skater {
 
         this.forced = function(){
             while (this.elevation !=0){
-                this.x += 1;
+                // this.x += 1;
                 this.y += 1;
                 this.elevation -= 1;
             }
         }
 
         this.jump = function(){ 
-            this.y -= 1 * this.gravity;
+            this.y -= 1;
             this.elevation += 1;
             //this.elevation += 1;
             console.log('ok');
