@@ -1,4 +1,4 @@
-document.addEventListener('keypress', event => {
+document.addEventListener('keydown', event => {
     if (event.keyCode == 32) {
             skater.jump();
     }
