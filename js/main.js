@@ -10,30 +10,34 @@ canvas.height= '480';
 // imageSkater.src ='assets/img/sprite_skater.png';
 
 let image = new Image();
-image.src = 'assets/img/desert.jpg';
+image.src = 'assets/img/background.jpg';
 
-let papierPeint = new PapierPeint(image, 0,-15,1920,495);
+let papierPeint = new PapierPeint(image, 0,-15,2060,1080);
 let index = 0;
-let speed = 5 ;
+//vitesse de défilement
+let speed = 5;
+let floorY = 335;
 
 const gravity = 3.5;
-const floor = 300;
 
 // on crée un nouveau skater
-let skater = new Skater(gravity, floor,200,floor-25,25,25);
+let skater = new Skater(gravity,floorY, 25, 25, 'red');
+// on crée le sol
+let sol = new Floor(floorY,canvas.width, canvas.height, 'lime');
 
 
 function update(){
     ctx.clearRect(0,0,canvas.width, canvas.height);
     index ++;
     // background first part 
-    ctx.drawImage(image, 0, 0, 1920, 495, -((index * (speed / 2)) % 1920) + 1920, 0,1920, 495);
+    ctx.drawImage(image, 0, 1500, 8584, 4500, -((index * (speed / 2)) % 8584) + 8584, 0,8584, 4500);
     // background second part
-    ctx.drawImage(image, 0, 0, 1920, 495, -(index * (speed / 2)) % 1920, 0, 1920, 495);
+    ctx.drawImage(image, 0, 1500, 8584, 4500, -(index * (speed / 2)) % 8584, 0, 8584, 4500);
     
     //le skater vie
     skater.draw();
-
+    sol.draw();
+    
 
 
     window.requestAnimationFrame(update);

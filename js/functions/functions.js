@@ -1,6 +1,12 @@
 document.addEventListener('keydown', event => {
-    if (event.keyCode == 32) {
+    if (event.keyCode == 32){ 
+        console.log('ok')
             skater.jump();
+            setTimeout(() => {
+                skater.land()
+                
+            }, 100);
+        
     }
 })
 
@@ -11,4 +17,9 @@ document.addEventListener('keydown', event => {
 //     }
 
 // })
+
+function getDistance(valOne, valTwo) {
+    let value = valOne - valTwo;
+    return value;
+}
 
