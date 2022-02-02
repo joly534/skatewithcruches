@@ -2,11 +2,7 @@
 let canvas = document.getElementById('skate_park');
 let ctx = canvas.getContext('2d');
 canvas.width = '640';
-canvas.height= '480';
-
-// on instancie le sprite du skater
-// let imageSkater = new Image();
-// imageSkater.src ='assets/img/sprite_skater.png';
+canvas.height= window.innerHeight;
 
 let image = new Image();
 image.src = 'assets/img/background.jpg';
@@ -15,7 +11,7 @@ let papierPeint = new PapierPeint(image, 0,-15,2060,1080);
 let index = 0;
 //vitesse de défilement
 let speed = 5;
-let floorY = 335;
+let floorY = 635;
 
 const gravity = 3.5;
 

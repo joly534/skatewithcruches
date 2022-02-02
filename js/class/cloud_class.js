@@ -4,7 +4,7 @@ class Cloud {
         this.skyX = 700;
         this.x = Math.floor(Math.random()*this.skyX);
         this.y = 100;
-        this.radius = Math.floor(Math.random()*50);
+        this.radius = Math.floor(Math.random()*15);
         this.color = 'white';
 
         this.draw = function(){

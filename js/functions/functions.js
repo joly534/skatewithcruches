@@ -12,3 +12,8 @@ function getDistanceXfromSkater(val) {
     return value;
 }
 
+function getDistanceYfromSkater(val) {
+    let value = val - (skater.y + skater.height);
+    return value;
+}
+

@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
 #skate_park{
-    border:solid 1px red
+    border:solid 1px red;
+    position: absolute;
 }
