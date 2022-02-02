@@ -1,7 +1,6 @@
 // à propos du canvas
 let canvas = document.getElementById('skate_park');
 let ctx = canvas.getContext('2d');
-
 canvas.width = '640';
 canvas.height= '480';
 
@@ -21,11 +20,11 @@ let floorY = 335;
 const gravity = 3.5;
 
 // on crée un nouveau skater
-let skater = new Skater(gravity,floorY, 25, 25, 'red');
+let skater = new Skater(gravity,floorY, 25, 25);
 // on crée le sol
-let sol = new Floor(floorY,canvas.width, canvas.height, 'lime');
+let sol = new Floor(floorY,canvas.width, canvas.height);
 
-
+let score = 0;
 function update(){
     ctx.clearRect(0,0,canvas.width, canvas.height);
     index ++;
@@ -37,6 +36,9 @@ function update(){
     //le skater vie
     skater.draw();
     sol.draw();
+    drawSky();
+    drawScore(score);
+
     
 
 
