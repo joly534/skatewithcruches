@@ -38,6 +38,7 @@ function update(){
     sol.draw();
     drawSky();
     drawScore(score);
+    drawMoney();
 
     
 

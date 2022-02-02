@@ -10,12 +10,10 @@ class Skater {
         this.hauteur = this.y- this.height;
         this.calcul = 22 * (gravity - this.elevation);
         this.draw = function(){
+            ctx.fillStyle = 'pink';
             ctx.fillRect(this.x, this.y, this.width, this.height);
-            ctx.fillStyle = 'red';
             ctx.fill();
-            //ctx.drawImage(image, this.sx, this.sy, this.sWidth, this.sHeight, dx, dy, dWidth, dHeight);
         };
-
         this.jump = function(){ 
                 this.y -= this.calcul ;
                 this.elevation += .5; 

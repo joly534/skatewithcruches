@@ -7,14 +7,8 @@ document.addEventListener('keydown', event => {
     }
 })
 
-document.addEventListener('keypress', event => {
-    if (event.keyCode == 32){ 
-        skater.draw();         
-    }
-})
-
-function getDistance(valOne, valTwo) {
-    let value = valOne - valTwo;
+function getDistanceXfromSkater(val) {
+    let value = val - (skater.x + skater.width);
     return value;
 }
 
