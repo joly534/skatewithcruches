@@ -4,19 +4,26 @@ let ctx = canvas.getContext('2d');
 canvas.width = '640';
 canvas.height= window.innerHeight;
 
-let image = new Image();
-image.src = 'assets/img/background.jpg';
+// à propos de l'interface
+let container_commandes = document.getElementById('container_buttons');
+container_commandes.width = 640;
 
-let papierPeint = new PapierPeint(image, 0,-15,2060,1080);
+let imageBackground = new Image();
+imageBackground.src = 'assets/img/background.jpg';
+
+let imageSkater = new Image();
+imageSkater.src = 'assets/img/skater.png';
+
 let index = 0;
 //vitesse de défilement
 let speed = 5;
+//hauteur du sol
 let floorY = 635;
 
 const gravity = 3.5;
 
 // on crée un nouveau skater
-let skater = new Skater(gravity,floorY, 25, 25);
+let skater = new Skater(imageSkater,gravity,floorY,128,128);
 // on crée le sol
 let sol = new Floor(floorY,canvas.width, canvas.height);
 
@@ -24,18 +31,15 @@ let score = 0;
 function update(){
     ctx.clearRect(0,0,canvas.width, canvas.height);
     index ++;
-    // background first part 
-    ctx.drawImage(image, 0, 1500, 8584, 4500, -((index * (speed / 2)) % 8584) + 8584, 0,8584, 4500);
-    // background second part
-    ctx.drawImage(image, 0, 1500, 8584, 4500, -(index * (speed / 2)) % 8584, 0, 8584, 4500);
     
+    drawBackground(imageBackground, index, speed);
     //le skater vie
     skater.draw();
     sol.draw();
     drawSky();
-    drawScore(score);
+    drawText(score);
     drawMoney();
-
+    console.log(index)
     
 
 

@@ -1,26 +1,24 @@
 class Skater {
-    constructor(gravity,floorY,width,height){
+    constructor(image,gravity,floorY, dwidth, dheight){
         this.elevation = 1;
-        this.x = canvas.width/ 5;
-        this.y =  floorY- height;
-        this.width = width;
-        this.height = height;
+        this.dx = canvas.width/ 5;
+        this.dy =  floorY- dheight;
+        this.dwidth = 128;
+        this.dheight = 128;
         this.elevation = 0;
         this.state = false;
         this.hauteur = this.y- this.height;
         this.calcul = 22 * (gravity - this.elevation);
         this.draw = function(){
-            ctx.fillStyle = 'pink';
-            ctx.fillRect(this.x, this.y, this.width, this.height);
-            ctx.fill();
+            ctx.drawImage(image, 0,128,64,64, this.dx, this.dy, this.dwidth, this.dheight);
         };
         this.jump = function(){ 
-                this.y -= this.calcul ;
+                this.dy -= this.calcul ;
                 this.elevation += .5; 
 
         }
         this.land = function(){
-                this.y += this.calcul ;
+                this.dy += this.calcul ;
                 this.elevation -= .5; 
 
         }

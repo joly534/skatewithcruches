@@ -1,7 +1,7 @@
 class Money {
-    constructor(index) {
+    constructor() {
         this.x = 640;
-        this.y = 320;
+        this.y = 620;
         this.radius = 10;
 
         this.draw = function() {
@@ -12,7 +12,7 @@ class Money {
         }
 
         this.move = function() {
-            this.x -= index;
+            this.x -= 4;
         }
     }
 }
