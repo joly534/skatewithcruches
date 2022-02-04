@@ -1,6 +1,6 @@
 class Money {
     constructor() {
-        this.x = 640;
+        this.x = window.innerWidth;
         this.y = 620;
         this.radius = 10;
 

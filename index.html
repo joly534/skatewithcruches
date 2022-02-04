@@ -12,12 +12,61 @@
     <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <!--LE CANVAS-->
     <canvas id="skate_park"></canvas>
+
+    <!--L'INTERFACE DU JEU-->
     <div id="interface">
-        <div id="container_buttons">
-            
+
+        <!--BOUTTONS DE L'INTERFACE-->
+        <div id="command">
+            <button onclick="show_wallet()" id='bouton_wallet' class="inactive_button">WALLET</button>
+            <button onclick="show_social()" id='bouton_social' class="inactive_button">SOCIAL NETWORK</button>
+            <button onclick="show_shop()" id='bouton_shop' class="inactive_button">SHOP</button>
+            <button onclick="show_settings()" id='bouton_settings' class="inactive_button">SETTINGS</button>
         </div>
+
+        <div id="experience">
+            <!--LISTE DES FOLLOWERS-->
+            <span id="followers"></span>    
+            <!--LISTE DES GAINS-->
+            <span id="gain"></span>
+        </div>
+
+
+        <!--WALLET-->
+        <div id="wallet">
+            <p>
+                blablablablablablablablablablablablablablablablablablablabla
+            </p>
+        </div>
+        <!--SOCIAL NETWORK-->
+        <div id="social">
+            <p>
+                blablablablablablablablablablablablablablablablablablablabla
+            </p>
+        </div>
+        <!--SHOP-->
+        <div id="shop">            
+            <p>
+                blablablablablablablablablablablablablablablablablablablabla
+            </p>
+        </div>
+        <!--SETTINGS-->
+        <div id="settings">
+            <!--POUR MUTER LE JEU-->
+            <div id="mute">
+                <span>SOUND : </span>
+                <button onclick='mute()' id="button_mute">Mute</button>
+                <button onclick='unmute()' id="button_unmute">UNMUTE</button>
+            </div>
+            <!--POUR GERER LE VOLUME-->
+            <div id="volume">
+                <span>VOLUME : </span>
+                0<input type="range" name="range_for_volume" id="range_volume">100
+            </div>
+        </div>
+
     </div>
 
 
@@ -27,11 +76,12 @@
     <script src="js/class/floor_class.js"></script>
     <script src="js/class/money_class.js"></script>
     <script src="js/class/text_class.js"></script>
+    <script src="js/functions/sound_functions.js"></script> 
     <script src="js/functions/background_functions.js"></script> 
     <script src="js/functions/event_functions.js"></script> 
-    <script src="js/functions/sky_functions.js"></script>
     <script src="js/functions/money_functions.js"></script>
+    <script src="js/functions/sky_functions.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/functions/text_functions.js"></script>
+    <script src="js/functions/interface_functions.js"></script>
 </body>
 </html>

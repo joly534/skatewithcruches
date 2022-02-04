@@ -1,7 +1,7 @@
 class Cloud {
     #color
     constructor(index){
-        this.skyX = 700;
+        this.skyX = window.innerWidth;
         this.x = Math.floor(Math.random()*this.skyX);
         this.y = 100;
         this.radius = Math.floor(Math.random()*15);

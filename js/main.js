@@ -1,16 +1,12 @@
 // à propos du canvas
 let canvas = document.getElementById('skate_park');
 let ctx = canvas.getContext('2d');
-canvas.width = '640';
-canvas.height= window.innerHeight;
-
-// à propos de l'interface
-let container_commandes = document.getElementById('container_buttons');
-container_commandes.width = 640;
+canvas.width = window.innerWidth -1;
+canvas.height= window.innerHeight -1;
 
 let imageBackground = new Image();
 imageBackground.src = 'assets/img/background.jpg';
-
+//on initialise le sprite skater
 let imageSkater = new Image();
 imageSkater.src = 'assets/img/skater.png';
 
@@ -19,8 +15,10 @@ let index = 0;
 let speed = 5;
 //hauteur du sol
 let floorY = 635;
-
 const gravity = 3.5;
+
+let scoreFollowers = 0;
+let gain = 0;
 
 // on crée un nouveau skater
 let skater = new Skater(imageSkater,gravity,floorY,128,128);
@@ -37,9 +35,8 @@ function update(){
     skater.draw();
     sol.draw();
     drawSky();
-    drawText(score);
-    drawMoney();
-    console.log(index)
+    drawFollowers(scoreFollowers);
+    drawGain(gain);
     
 
 
