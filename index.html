@@ -58,12 +58,12 @@
             <div id="mute">
                 <span>SOUND : </span>
                 <button onclick='mute()' id="button_mute">Mute</button>
-                <button onclick='unmute()' id="button_unmute">UNMUTE</button>
+                <button onclick='unMute()' id="button_unmute">UNMUTE</button>
             </div>
             <!--POUR GERER LE VOLUME-->
             <div id="volume">
-                <span>VOLUME : </span>
-                0<input type="range" name="range_for_volume" id="range_volume">100
+                <span id="show_volume"></span>
+               <input type="range" name="range_for_volume" id="range_volume">
             </div>
         </div>
 

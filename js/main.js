@@ -37,7 +37,7 @@ function update(){
     drawSky();
     drawFollowers(scoreFollowers);
     drawGain(gain);
-    
+    playMusic()
 
 
     window.requestAnimationFrame(update);
