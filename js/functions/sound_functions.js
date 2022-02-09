@@ -23,15 +23,13 @@ function playMusic(){
         sound.currentTime = 0;
         sound.volume = volumeMusic.value/100;
         sound.play();
-        getVolume()
-        
-
-    } else {
+        getVolume();
+        } else {
         sound.pause();
-        console.log('music pause');
         getVolume()
     }
 }
+
 function mute(){
     stateMusic = false;
     buttonMute.disabled = true;

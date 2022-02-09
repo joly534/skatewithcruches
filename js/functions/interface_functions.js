@@ -97,7 +97,7 @@ function drawFollowers(value) {
 
 }
 
-function drawGain(value) {     
+function drawScoreGain(value) {     
     screenGain.innerHTML= 'GAIN : ' + value + ' CRUTCHES';
 
 }

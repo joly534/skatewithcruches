@@ -7,13 +7,9 @@ document.addEventListener('keydown', event => {
     }
 })
 
-function getDistanceXfromSkater(val) {
-    let value = val - (skater.x + skater.width);
+function getDistance(valOne, valTwo) {
+    let value = valOne - valTwo;
     return value;
 }
 
-function getDistanceYfromSkater(val) {
-    let value = val - (skater.y + skater.height);
-    return value;
-}
 
