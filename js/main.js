@@ -10,7 +10,7 @@ let imageBackground = new Image();
 imageBackground.src = 'assets/img/background.jpg';
 //à propos du sol
 let imageFloor = new Image();
-imageFloor.src ='assets/img/street.png';
+imageFloor.src ='assets/img/street1.png';
 //on initialise le sprite skater
 let imageSkater = new Image();
 imageSkater.src = 'assets/img/skater.png';
@@ -48,10 +48,11 @@ function update(){
     drawSky();
     
     drawFollowers(scoreFollowers);
-    drawScoreGain(gain);
+    // drawScoreGain(gain);
+    drawCoins(gain);
+
     //le skater vie
     skater.draw();
-    drawCoins();
     
 
     window.requestAnimationFrame(update);
