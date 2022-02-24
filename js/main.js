@@ -3,6 +3,8 @@ let canvas = document.getElementById('skate_park');
 let ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth -1;
 canvas.height= window.innerHeight -1;
+ctx.imageSmoothingEnabled = false;
+
 //à propos du background
 let imageBackground = new Image();
 imageBackground.src = 'assets/img/background.jpg';
@@ -41,9 +43,9 @@ function update(){
     skater.draw();
     sol.draw();
     drawSky();
-    drawGain(gain);
     
     drawFollowers(scoreFollowers);
+    drawGain(gain);
     
 
     window.requestAnimationFrame(update);
