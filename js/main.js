@@ -8,6 +8,9 @@ ctx.imageSmoothingEnabled = false;
 //à propos du background
 let imageBackground = new Image();
 imageBackground.src = 'assets/img/background.jpg';
+//à propos du sol
+let imageFloor = new Image();
+imageFloor.src ='assets/img/street.png';
 //on initialise le sprite skater
 let imageSkater = new Image();
 imageSkater.src = 'assets/img/skater.png';
@@ -38,14 +41,17 @@ function update(){
     ctx.clearRect(0,0,canvas.width, canvas.height);
     index ++;
     
+    
     drawBackground(imageBackground, index, speed);
-    //le skater vie
-    skater.draw();
-    sol.draw();
+    drawFloor(imageFloor, index, speed );
+
     drawSky();
     
     drawFollowers(scoreFollowers);
-    drawGain(gain);
+    drawScoreGain(gain);
+    //le skater vie
+    skater.draw();
+    drawCoins();
     
 
     window.requestAnimationFrame(update);

@@ -119,7 +119,7 @@ class Skater {
 class Money {
     constructor(image) {
         this.x = window.innerWidth;
-        this.y = 550;
+        this.y = 570;
         this.radius = 10;
         this.image = image;
         this.step = 0;

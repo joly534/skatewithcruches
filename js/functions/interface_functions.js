@@ -29,7 +29,7 @@ function show_wallet(){
     }
 }
 
-//POUR VISUALISER LE WALLET
+//POUR VISUALISER LES RESEAUX SOCIAUX
 function show_social(){
     if (social.style.display == 'block') {
         social.style.display = 'none';
@@ -92,6 +92,7 @@ function show_settings(){
 
 let screenFollowers = document.getElementById('followers');
 let screenGain = document.getElementById('gain');
+
 function drawFollowers(value) {     
     screenFollowers.innerHTML= value + ' FOLLOWERS' ;
 
