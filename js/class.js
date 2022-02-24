@@ -100,8 +100,17 @@ class Skater {
         this.state = false;
         this.hauteur = this.y- this.height;
         this.calcul = 22 * (gravity - this.elevation);
+        this.step = 8;
+        setInterval(() => {
+            this.step --;
+            if (this.step == 0) {
+                this.step = 8;
+            }
+        }, 80);
+
+
         this.draw = function(){
-            ctx.drawImage(image, 0,128,64,64, this.dx, this.dy, this.dwidth, this.dheight);
+            ctx.drawImage(image, 64 * this.step,128,64,64, this.dx, this.dy, this.dwidth, this.dheight);
         };
         this.jump = function(){ 
                 this.dy -= this.calcul ;

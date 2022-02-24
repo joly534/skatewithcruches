@@ -8,7 +8,7 @@ imageCoin.src = 'assets/img/coin.png';
 setInterval(() => {
     let money = new Money(imageCoin);
     treasure.push(money);            
-}, 100);
+}, 1000);
 
 
 function drawCoins(gain) {
