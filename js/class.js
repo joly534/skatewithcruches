@@ -136,12 +136,12 @@ class Money {
         //ANIMATION DE LA PIECE
         setInterval(() => {
             this.step ++;
-            if (this.step >= 6 ){this.step = 0}
-        }, 150);
+            if (this.step >= 8){this.step = 0}
+        }, 80);
 
 
         this.draw = function() {
-            ctx.drawImage(this.image, 200 * this.step, 0, 210, 210, this.x, this.y, 40, 40);
+            ctx.drawImage(this.image, 134 * this.step, 0,128, 128, this.x, this.y, 64, 64);
         }
 
         this.move = function() {

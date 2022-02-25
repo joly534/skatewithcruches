@@ -3,12 +3,12 @@
 let treasure = [];
 // il a quel gueule le butin ?
 let imageCoin = new Image();
-imageCoin.src = 'assets/img/coin.png';
+imageCoin.src = 'assets/img/spritesheet.png';
 let bord = 0;
 setInterval(() => {
     let money = new Money(imageCoin);
     treasure.push(money);            
-}, 100);
+}, 1000);
 
 
 function drawCoins() {
