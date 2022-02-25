@@ -51,23 +51,6 @@ class Cloud {
     }
 }
 
-class Floor {
-    #color
-    constructor(floorY,width, height) {
-        this.x = 0;
-        this.y = floorY;
-        this.width = width;
-        this.height = height;
-        this.#color = 'green';
-
-        this.draw = function() {
-            ctx.fillStyle = this.#color;
-            ctx.rect(this.x, this.y, this.width, this.height);
-            ctx.fill();
-        }
-    }
-}
-
 class Bouton {
     constructor(x, y, width, height) {
         this.x = x;
@@ -128,10 +111,11 @@ class Skater {
 class Money {
     constructor(image) {
         this.x = window.innerWidth;
-        this.y = 570;
-        this.radius = 10;
+        this.y = 700;
+        this.radius = 32;
         this.image = image;
         this.step = 0;
+        this.stepPop = 9;
 
         //ANIMATION DE LA PIECE
         setInterval(() => {
@@ -139,13 +123,13 @@ class Money {
             if (this.step >= 8){this.step = 0}
         }, 80);
 
-
         this.draw = function() {
-            ctx.drawImage(this.image, 134 * this.step, 0,128, 128, this.x, this.y, 64, 64);
+            ctx.drawImage(this.image, 134 * this.step, 0,128, 128, this.x, this.y, 50,50);
         }
 
         this.move = function() {
-            this.x -= 4;
+            this.x -= 2.5;
         }
+
     }
 }

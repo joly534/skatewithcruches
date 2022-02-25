@@ -19,7 +19,7 @@ let index = 0;
 //vitesse de défilement
 let speed = 5;
 //hauteur du sol
-let floorY = 635;
+let floorY = 750;
 //gravité
 const gravity = 3.5;
 //nombre de followers
@@ -32,8 +32,6 @@ let myStockage = window.localStorage;
 
 // on crée un nouveau skater
 let skater = new Skater(imageSkater,gravity,floorY,128,128);
-// on crée le sol
-let sol = new Floor(floorY,canvas.width, canvas.height);
 
 let skatePos = skater.x + skater.width;
 function update(){
@@ -53,7 +51,6 @@ function update(){
 
     //le skater vie
     skater.draw();
-    
 
     window.requestAnimationFrame(update);
 }

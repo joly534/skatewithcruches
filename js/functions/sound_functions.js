@@ -5,7 +5,6 @@ let buttonMute = document.getElementById('button_mute');
 let buttonUnmute = document.getElementById('buttonUnmute');
 
 let volumeMusic = document.getElementById('range_volume');
-let stateMusic = false;
 
 let showVolume = document.getElementById('show_volume');
 
@@ -18,24 +17,21 @@ getVolume()
 buttonMute.disabled = true;
 
 function playMusic(){
-    if (stateMusic == true) {
-        console.log(volumeMusic.value/100)
+    
         sound.currentTime = 0;
         sound.volume = volumeMusic.value/100;
         sound.play();
-        getVolume();
-        } else {
-        sound.pause();
-        getVolume()
-    }
-}
+} 
+
 
 function mute(){
-    stateMusic = false;
     buttonMute.disabled = true;
+    buttonUnmute.disabled = false;
+    sound.pause()
 }
 
 function unMute(){
-    stateMusic = true;
     buttonMute.disabled = false;
+    buttonUnmute.disabled = true;
+    sound.play()
 }
